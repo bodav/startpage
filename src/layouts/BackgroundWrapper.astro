@@ -1,0 +1,25 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+---
+
+<div id="outerWrapper" class="relative dark theme-slate">
+  <div
+    id="backgroundWrapper"
+    class="fixed overflow-auto w-full h-full bg-theme-50 dark:bg-theme-800 transition-all"
+    style="background-image:
+	url(https://images.unsplash.com/photo-1612977420019-0284a333eefb?q=80&w=3348&auto=format&fit=crop);background-position:center;background-size:cover"
+  >
+    <div
+      id="backgroundOverlay"
+      class="fixed overflow-auto w-full h-full backdrop-brightness-100"
+    >
+      <div
+        id="container"
+        class="relative container m-auto flex flex-col justify-start z-10 h-full"
+      >
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
