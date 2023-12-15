@@ -10,11 +10,12 @@ const brightness = "backdrop-brightness-" + background.brightness.toString();
     <div
       id="backgroundWrapper"
       class="fixed overflow-auto w-full h-full bg-slate-50 dark:bg-slate-950 transition-all"
-      style={`background-image:url(${background.image});background-position:center;background-size:cover`}
+      style={`background-image:url(${background.image});background-position:center;background-size:cover;`}
     >
       <div
         id="backgroundOverlay"
-        class:list={["fixed", "overflow-auto", "w-full", "h-full", brightness]}
+        style={`backdrop-filter: brightness(${background.brightness}%);`}
+        class="fixed overflow-auto w-full h-full"
       >
         <div
           id="container"
