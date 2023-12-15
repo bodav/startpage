@@ -1,0 +1,38 @@
+title: Startpage
+theme: dark
+background: 
+  image: https://images.unsplash.com/photo-1488239585740-f5be6038763f?q=80&w=1472&auto=format&fit=crop
+  brightness: 50
+
+bookmarks:
+  - name: Github
+    abbr: GH
+    url: https://github.com
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com
+
+  - name: JV/Aabenraa
+    abbr: JV
+    url: https://jv.dk/aabenraa
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com

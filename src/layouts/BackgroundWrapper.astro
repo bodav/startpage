@@ -1,18 +1,20 @@
 ---
-import { getCollection, getEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
+
+const { title, theme, background } = Astro.props;
+const brightness = `backdrop-brightness-${background.brightness}`;
 ---
 
-<BaseLayout>
-  <div id="outerWrapper" class="relative dark">
+<BaseLayout title={title}>
+  <div id="outerWrapper" class:list={["relative", theme]}>
     <div
       id="backgroundWrapper"
-      class="fixed overflow-auto w-full h-full bg-slate-50 dark:bg-slate-800 transition-all"
-      style="background-image:url(https://images.unsplash.com/photo-1612977420019-0284a333eefb?q=80&w=3348&auto=format&fit=crop);background-position:center;background-size:cover"
+      class="fixed overflow-auto w-full h-full bg-slate-50 dark:bg-slate-950 transition-all"
+      style={`background-image:url(${background.image});background-position:center;background-size:cover`}
     >
       <div
         id="backgroundOverlay"
-        class="fixed overflow-auto w-full h-full backdrop-brightness-50"
+        class:list={["fixed", "overflow-auto", "w-full", "h-full", brightness]}
       >
         <div
           id="container"
