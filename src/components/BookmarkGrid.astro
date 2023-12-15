@@ -1,25 +1,18 @@
 ---
 import BookmarkItem from "../components/BookmarkItem.astro";
 const { bookmarks } = Astro.props;
-
-console.log(bookmarks);
 ---
 
 <div class="flex flex-wrap h-screen place-items-center p-10">
   <div class="grid grid-cols-4 gap-4 justify-center">
-    <BookmarkItem name="Github" abbr="GH" url="github.com" />
-    <BookmarkItem name="Reddit" abbr="RD" url="reddit.com" />
-    <BookmarkItem name="JV/Aabenraa" abbr="JV" url="jv.dk/aabenraa" />
-    <BookmarkItem name="Hacker News" abbr="HN" url="news.ycombinator.com" />
-    <BookmarkItem name="DMI" abbr="DM" url="dmi.dk" />
-    <BookmarkItem name="Facebook" abbr="FB" url="facebook.com" />
-    <BookmarkItem name="Youtube" abbr="YT" url="youtube.com" />
-    <BookmarkItem name="DR/TV" abbr="DR" url="dr.dk/tv" />
-    <BookmarkItem name="Twitter" abbr="TW" url="twitter.com" />
-    <BookmarkItem
-      name="Humans of Newyork"
-      abbr="HU"
-      url="humansofnewyork.com"
-    />
+    {
+      bookmarks.map((bookmark: any) => (
+        <BookmarkItem
+          name={bookmark.name}
+          abbr={bookmark.abbr}
+          url={bookmark.url}
+        />
+      ))
+    }
   </div>
 </div>
