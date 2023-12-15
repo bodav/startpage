@@ -1,0 +1,46 @@
+title: Startpage
+theme: dark
+background: 
+  image: https://images.unsplash.com/photo-1488239585740-f5be6038763f?q=80&w=1472&auto=format&fit=crop
+  brightness: 50
+
+bookmarks:
+  - name: Github
+    abbr: GH
+    url: https://github.com
+
+  - name: Reddit
+    abbr: RD
+    url: https://reddit.com
+
+  - name: JV/Aabenraa
+    abbr: JV
+    url: https://jv.dk/aabenraa
+
+  - name: Hacker News
+    abbr: HN
+    url: https://news.ycombinator.com
+
+  - name: DMI
+    abbr: DM
+    url: https://dmi.dk
+
+  - name: Facebook
+    abbr: FB
+    url: https://facebook.com
+
+  - name: Youtube
+    abbr: YT
+    url: https://youtube.com
+
+  - name: DR/TV
+    abbr: DR
+    url: https://dr.dk/tv
+
+  - name: Twitter
+    abbr: TW
+    url: https://x.com
+
+  - name: Humans of Newyork
+    abbr: HU
+    url: https://humansofnewyork.com

@@ -1,7 +1,18 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BackgroundWrapper from "../layouts/BackgroundWrapper.astro";
+import BookmarkGrid from "../components/BookmarkGrid.astro";
+import Footer from "../components/Footer.astro";
+
+import { getEntry } from "astro:content";
+
+const config = await getEntry("config", "startpage");
 ---
 
-<BaseLayout>
-  <h1 class="text-lime-900">Astro</h1>
-</BaseLayout>
+<BackgroundWrapper
+  title={config.data.title}
+  theme={config.data.theme}
+  background={config.data.background}
+>
+  <BookmarkGrid bookmarks={config.data.bookmarks} />
+  <Footer />
+</BackgroundWrapper>

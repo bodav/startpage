@@ -1,0 +1,18 @@
+---
+import BookmarkItem from "../components/BookmarkItem.astro";
+const { bookmarks } = Astro.props;
+---
+
+<div class="flex flex-wrap h-screen place-items-center p-10">
+  <div class="grid grid-cols-4 gap-4 justify-center">
+    {
+      bookmarks.map((bookmark: any) => (
+        <BookmarkItem
+          name={bookmark.name}
+          abbr={bookmark.abbr}
+          url={bookmark.url}
+        />
+      ))
+    }
+  </div>
+</div>

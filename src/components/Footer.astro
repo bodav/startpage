@@ -1,0 +1,17 @@
+---
+const sha = import.meta.env.GITHUB_SHA;
+const repo = import.meta.env.GITHUB_REPOSITORY;
+const ref = import.meta.env.GITHUB_REF_NAME;
+const url = `https://github.com/${repo}`;
+---
+
+<div id="footer" class="flex flex-col mt-auto p-8 w-full">
+  <div class="flex mt-4 w-full justify-end">
+    <a
+      href={url}
+      target="_blank"
+      class="ml-2 text-xs text-slate-400 dark:text-slate-400 flex flex-row items-center"
+      >{repo}/{ref} {sha}</a
+    >
+  </div>
+</div>
