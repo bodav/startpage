@@ -1,5 +1,3 @@
-https://tailscan.com/blog/tailwind-css-flex-a-quick-overview
-
 # Astro Starter Kit: Minimal
 
 ```sh
