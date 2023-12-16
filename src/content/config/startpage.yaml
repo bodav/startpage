@@ -1,5 +1,6 @@
 title: Startpage
 theme: light
+lanUrl: http://app.home
 background: 
   image: https://images.unsplash.com/photo-1528837516156-0a7225a43641?q=80&w=3433&auto=format&fit=crop
   brightness: 100
