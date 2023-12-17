@@ -1,16 +1,26 @@
 ---
+const { lanUrl } = Astro.props;
 const sha = import.meta.env.GITHUB_SHA;
 const repo = import.meta.env.GITHUB_REPOSITORY;
 const ref = import.meta.env.GITHUB_REF_NAME;
 const url = `https://github.com/${repo}`;
+const domain = new URL(lanUrl).hostname;
 ---
 
-<div id="footer" class="flex flex-col mt-auto p-8 w-full">
+<div id="footer" class="grid grid-cols-2 w-full mt-auto p-8">
+  <div class="flex mt-4 justify-start">
+    <a
+      href={lanUrl}
+      target="_blank"
+      class="ml-2 text-xs dark:text-black text-white/70 flex flex-row items-center font-medium"
+      >{domain}</a
+    >
+  </div>
   <div class="flex mt-4 w-full justify-end">
     <a
       href={url}
       target="_blank"
-      class="ml-2 text-xs text-slate-400 dark:text-slate-400 flex flex-row items-center"
+      class="ml-2 text-xs dark:text-black text-white/70 flex flex-row items-center font-medium"
       >{repo}/{ref} {sha}</a
     >
   </div>

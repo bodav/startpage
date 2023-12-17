@@ -14,5 +14,5 @@ const config = await getEntry("config", "startpage");
   background={config.data.background}
 >
   <BookmarkGrid bookmarks={config.data.bookmarks} />
-  <Footer />
+  <Footer lanUrl={config.data.lanUrl} />
 </BackgroundWrapper>
