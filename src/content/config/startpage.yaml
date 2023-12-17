@@ -42,6 +42,10 @@ bookmarks:
     abbr: TW
     url: https://twitter.com/i/lists/1583402559238283265
 
-  - name: Humans of Newyork
+  - name: Humans of NewYork
     abbr: HU
     url: https://humansofnewyork.com
+
+  - name: Feedly
+    abbr: FD
+    url: https://feedly.com
