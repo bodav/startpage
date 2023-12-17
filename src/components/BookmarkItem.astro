@@ -7,16 +7,16 @@ const iconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=16`;
 <div class="mb-3 mr-3">
   <a
     class="block w-full text-left cursor-pointer transition-all h-15 rounded-md font-medium
-    text-slate-50 bg-black/70 hover:bg-black/80
-    dark:text-slate-950 dark:bg-white/70 dark:hover:bg-white/80"
+    text-white bg-black/40 hover:bg-black/80
+    dark:text-black dark:bg-white/60 dark:hover:bg-white/80"
     href={url}
     target="_blank"
   >
     <div class="flex">
       <div
         class="flex-shrink-0 flex items-center justify-center w-11
-         bg-black/80 dark:bg-slate-200/50
-          text-slate-300 hover:text-slate-50 dark:text-slate-100
+         bg-black/80 dark:bg-white/30
+          text-white dark:text-black
           text-sm font-extrabold rounded-l-md"
       >
         <img
@@ -28,9 +28,11 @@ const iconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=16`;
         />
       </div>
       <div class="flex-1 flex items-center justify-between rounded-r-md">
-        <div class="flex-1 grow pl-3 py-2 text-sm">{name}</div>
+        <div class="flex-1 grow pl-3 py-2 text-sm">
+          {name}
+        </div>
         <div
-          class="px-2 py-2 truncate text-slate-300 dark:text-slate-900 text-xs"
+          class="px-2 py-2 truncate text-white/80 dark:text-black/80 text-xs"
         >
           {domain}
         </div>
