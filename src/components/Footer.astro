@@ -1,6 +1,6 @@
 ---
 const { lanUrl } = Astro.props;
-const sha = import.meta.env.GITHUB_SHA;
+const sha = import.meta.env.GITHUB_SHA.substring(0, 7);
 const repo = import.meta.env.GITHUB_REPOSITORY;
 const ref = import.meta.env.GITHUB_REF_NAME;
 const url = `https://github.com/${repo}`;
