@@ -12,16 +12,17 @@ const domain = new URL(lanUrl).hostname;
     <a
       href={lanUrl}
       target="_blank"
-      class="ml-2 text-xs dark:text-black text-white/70 flex flex-row items-center font-medium"
-      >{domain}</a
-    >
+      class="ml-2 text-xs dark:text-black text-white/70 flex flex-row items-center font-medium">
+      {domain}
+    </a>
   </div>
   <div class="flex mt-4 w-full justify-end">
     <a
       href={url}
       target="_blank"
-      class="ml-2 text-xs dark:text-black text-white/70 flex flex-row items-center font-medium"
-      >{repo}/{ref} {sha}</a
-    >
+      class="ml-2 text-xs dark:text-black text-white/70 flex flex-row items-center font-medium">
+      {repo}/{ref}
+      {sha}
+    </a>
   </div>
 </div>

@@ -11,8 +11,7 @@ const settings = await getEntry("settings", "startpage");
 <BackgroundWrapper
   title={settings.data.title}
   theme={settings.data.theme}
-  background={settings.data.background}
->
+  background={settings.data.background}>
   <BookmarkGrid bookmarks={settings.data.bookmarks} />
   <Footer lanUrl={settings.data.lanUrl} />
 </BackgroundWrapper>
