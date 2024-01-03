@@ -2,6 +2,7 @@
 import BackgroundWrapper from "../layouts/BackgroundWrapper.astro";
 import BookmarkGrid from "../components/BookmarkGrid.astro";
 import Footer from "../components/Footer.astro";
+import QuickSearch from "../components/QuickSearch.astro";
 
 import { getEntry } from "astro:content";
 
@@ -11,8 +12,8 @@ const settings = await getEntry("settings", "startpage");
 <BackgroundWrapper
   title={settings.data.title}
   theme={settings.data.theme}
-  background={settings.data.background}
->
+  background={settings.data.background}>
+  <QuickSearch />
   <BookmarkGrid bookmarks={settings.data.bookmarks} />
   <Footer lanUrl={settings.data.lanUrl} />
 </BackgroundWrapper>

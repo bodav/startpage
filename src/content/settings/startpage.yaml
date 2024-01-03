@@ -1,7 +1,7 @@
 title: Startpage
-theme: ligth
+theme: light
 lanUrl: http://app.home
-background: 
+background:
   image: https://images.unsplash.com/photo-1483197452165-7abc4b248905?q=80&w=1472&auto=format&fit=crop
   brightness: 50
 
@@ -49,3 +49,7 @@ bookmarks:
   - name: Feedly
     abbr: FD
     url: https://feedly.com
+
+  - name: Pushover
+    abbr: PO
+    url: https://client.pushover.net

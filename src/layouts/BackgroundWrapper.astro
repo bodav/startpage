@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-
 const { title, theme, background } = Astro.props;
 ---
 
@@ -9,17 +8,14 @@ const { title, theme, background } = Astro.props;
     <div
       id="backgroundWrapper"
       class="fixed overflow-auto w-full h-full bg-slate-50 dark:bg-slate-950 transition-all"
-      style={`background-image:url(${background.image});background-position:center;background-size:cover;`}
-    >
+      style={`background-image:url(${background.image});background-position:center;background-size:cover;`}>
       <div
         id="backgroundOverlay"
         style={`backdrop-filter: brightness(${background.brightness}%);`}
-        class="fixed overflow-auto w-full h-full"
-      >
+        class="fixed overflow-auto w-full h-full">
         <div
           id="container"
-          class="relative container m-auto flex flex-col justify-start z-10 h-full"
-        >
+          class="relative container m-auto flex flex-col justify-start z-10 h-full">
           <slot />
         </div>
       </div>
