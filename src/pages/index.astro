@@ -13,6 +13,10 @@ const settings = await getEntry("settings", "startpage");
   title={settings.data.title}
   theme={settings.data.theme}
   background={settings.data.background}>
+  <div x-data="">
+    <button x-on:click="console.log('clicked')">fsssdsdsd</button>
+  </div>
+
   <SearchOverlay />
   <BookmarkGrid bookmarks={settings.data.bookmarks} />
   <Footer lanUrl={settings.data.lanUrl} />
