@@ -49,3 +49,7 @@ bookmarks:
   - name: Feedly
     abbr: FD
     url: https://feedly.com
+
+  - name: Pushover
+    abbr: PO
+    url: https://client.pushover.net

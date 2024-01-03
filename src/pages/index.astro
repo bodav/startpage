@@ -2,7 +2,7 @@
 import BackgroundWrapper from "../layouts/BackgroundWrapper.astro";
 import BookmarkGrid from "../components/BookmarkGrid.astro";
 import Footer from "../components/Footer.astro";
-import SearchOverlay from "../components/SearchOverlay.astro";
+import QuickSearch from "../components/QuickSearch.astro";
 
 import { getEntry } from "astro:content";
 
@@ -13,11 +13,7 @@ const settings = await getEntry("settings", "startpage");
   title={settings.data.title}
   theme={settings.data.theme}
   background={settings.data.background}>
-  <div x-data="">
-    <button x-on:click="console.log('clicked')">fsssdsdsd</button>
-  </div>
-
-  <SearchOverlay />
+  <QuickSearch />
   <BookmarkGrid bookmarks={settings.data.bookmarks} />
   <Footer lanUrl={settings.data.lanUrl} />
 </BackgroundWrapper>
