@@ -53,3 +53,7 @@ bookmarks:
   - name: Pushover
     abbr: PO
     url: https://client.pushover.net
+
+  - name: Raindrop.io
+    abbr: RD
+    url: https://app.raindrop.io/

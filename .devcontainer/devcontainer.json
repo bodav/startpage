@@ -1,0 +1,31 @@
+{
+  "name": "startpage-devcontainer",
+  "build": { "dockerfile": "Dockerfile" },
+  "postCreateCommand": "npm install",
+  "waitFor": "postCreateCommand",
+  "forwardPorts": [4321],
+  "containerEnv": {
+    "NODE_ENV": "Development"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      }
+    }
+  }
+}

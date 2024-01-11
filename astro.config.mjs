@@ -6,5 +6,10 @@ import alpinejs from "@astrojs/alpinejs";
 export default defineConfig({
   integrations: [tailwind(), alpinejs()],
   site: 'https://bodav.github.io',
-  base: '/startpage'
+  base: '/startpage',
+  vite: {
+    server: {
+      watch: { usePolling: true, interval: 900, binaryInterval: 2000 }
+    }
+  }
 });
