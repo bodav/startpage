@@ -10,12 +10,6 @@
     <div
       x-cloak
       x-show="searchOpen"
-      x-transition:enter="transition ease-out duration-100 transform"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      x-transition:leave="transition ease-in duration-100 transform"
-      x-transition:leave-start="opacity-100"
-      x-transition:leave-end="opacity-0"
       aria-hidden="true"
       class="fixed inset-0 bg-black bg-opacity-50 dark:bg-white dark:bg-opacity-50">
     </div>
@@ -63,20 +57,26 @@
       return;
     }
 
-    if (re.test(String.fromCharCode(e.keyCode))) {
+    evt = e || window.event;
+    var charCode = evt.which || evt.keyCode;
+    var charStr = String.fromCharCode(charCode);
+    if (/[a-z0-9]/i.test(charStr)) {
       this.$nextTick(() => {
+        this.$refs.searchInput.focus();
         this.$refs.searchInput.value = e.key;
       });
+
       this.searchOpen = true;
     }
   }
 
   function ensureFocus() {
+    console.log(this.searchOpen);
     if (this.searchOpen) {
       this.$nextTick(() => {
         setTimeout(() => {
           this.$refs.searchInput.focus();
-        });
+        }, 50);
       });
     }
   }
@@ -86,7 +86,7 @@
     this.$nextTick(() => {
       setTimeout(() => {
         this.$refs.searchForm.submit();
-      });
+      }, 10);
     });
   }
 </script>
