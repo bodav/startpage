@@ -2,8 +2,8 @@ title: Startpage
 theme: light
 lanUrl: http://app.home
 background:
-  image: https://images.unsplash.com/photo-1483197452165-7abc4b248905?q=80&w=1472&auto=format&fit=crop
-  brightness: 50
+  image: https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=1740&auto=format&fit=crop
+  brightness: 70
 
 bookmarks:
   - name: Github
@@ -24,7 +24,7 @@ bookmarks:
 
   - name: DMI
     abbr: DM
-    url: https://dmi.dk
+    url: https://www.dmi.dk/lokation/show/DK/2625070/Aabenraa/
 
   - name: Facebook
     abbr: FB
@@ -46,14 +46,7 @@ bookmarks:
     abbr: HU
     url: https://humansofnewyork.com
 
-  - name: Feedly
-    abbr: FD
-    url: https://feedly.com
-
   - name: Pushover
     abbr: PO
     url: https://client.pushover.net
 
-  - name: Raindrop.io
-    abbr: RD
-    url: https://app.raindrop.io/
