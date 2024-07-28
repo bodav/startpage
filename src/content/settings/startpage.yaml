@@ -1,6 +1,6 @@
 title: Startpage
 theme: light
-lanUrl: http://app.home
+lanUrl: http://srv.local
 background:
   image: https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=1740&auto=format&fit=crop
   brightness: 70
