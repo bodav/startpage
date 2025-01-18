@@ -18,31 +18,29 @@ function App() {
   };
 
   return (
-    <>
+    <div
+      id="backgroundWrapper"
+      className="fixed overflow-auto w-full h-full transition-all"
+      style={backgroundStyle}>
       <div
-        id="backgroundWrapper"
-        className="fixed overflow-auto w-full h-full transition-all"
-        style={backgroundStyle}>
+        id="backgroundOverlay"
+        style={backgroundFilterStyle}
+        className="fixed overflow-auto w-full h-full">
         <div
-          id="backgroundOverlay"
-          style={backgroundFilterStyle}
-          className="fixed overflow-auto w-full h-full">
-          <div
-            id="container"
-            className="container m-auto grid grid-rows-[auto,1fr,auto] z-10 h-full">
-            <div className="row-start-1">
-              <Header />
-            </div>
-            <div className="row-start-2">
-              <LinkGrid />
-            </div>
-            <div className="row-start-3">
-              <Footer />
-            </div>
+          id="container"
+          className="container m-auto grid grid-rows-[auto,1fr,auto] z-10 h-full">
+          <div className="row-start-1">
+            <Header />
+          </div>
+          <div className="row-start-2">
+            <LinkGrid />
+          </div>
+          <div className="row-start-3">
+            <Footer />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
