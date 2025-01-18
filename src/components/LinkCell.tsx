@@ -5,11 +5,51 @@ interface LinkCellProps {
   title: string;
   url: string;
   icon: string;
+  index: number;
+  isXl: boolean;
 }
 
-const LinkCell: React.FC<LinkCellProps> = ({ title, url, icon }) => {
+const LinkCell: React.FC<LinkCellProps> = ({
+  title,
+  url,
+  icon,
+  index,
+  isXl
+}) => {
+  const roundCell = (index: number, isXl: boolean) => {
+    if (isXl) {
+      if (index === 0) {
+        return "rounded-tl-2xl";
+      } else if (index === 5) {
+        return "rounded-tr-2xl";
+      } else if (index === 6) {
+        return "rounded-bl-2xl";
+      } else if (index === 11) {
+        return "rounded-br-2xl";
+      } else {
+        return "";
+      }
+    } else {
+      if (index === 0) {
+        return "rounded-tl-2xl";
+      } else if (index === 3) {
+        return "rounded-tr-2xl";
+      } else if (index === 8) {
+        return "rounded-bl-2xl";
+      } else if (index === 11) {
+        return "rounded-br-2xl";
+      } else {
+        return "";
+      }
+    }
+  };
+
   return (
-    <div className="text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-40 hover:bg-opacity-80 dark:hover:bg-opacity-80 backdrop-filter backdrop-blur-sm">
+    <div
+      className={`text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-40 hover:bg-opacity-80 dark:hover:bg-opacity-80 backdrop-filter backdrop-blur-sm ${roundCell(
+        index,
+        isXl
+      )}`}>
       <a
         href={url}
         target="_blank"
