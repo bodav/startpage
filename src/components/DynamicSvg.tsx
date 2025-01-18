@@ -6,10 +6,10 @@ interface DynamicSvgProps {
 }
 
 const DynamicSvg: React.FC<DynamicSvgProps> = ({ icon, className }) => {
-  const SvgIcon = lazy(() => import(`../assets/icons/${icon}.svg`));
+  const SvgIcon = lazy(() => import(`../assets/icons/${icon}.svg?react`));
 
   return (
-    <Suspense>
+    <Suspense fallback={<div className={className} />}>
       <SvgIcon className={className} />
     </Suspense>
   );
