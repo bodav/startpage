@@ -56,7 +56,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
         rel="noreferrer"
         className="flex items-center justify-start p-6">
         <DynamicSvg icon={icon} className="w-10 h-10 fill-current" />
-        <span className=" hidden text-sm font-light ml-4 sm:inline">
+        <span className=" hidden text-sm font-normal ml-4 sm:inline">
           {title}
         </span>
       </a>
