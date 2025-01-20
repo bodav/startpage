@@ -1,8 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import useStore from "@/lib/store";
+import { useCallback, useEffect, useRef } from "react";
 
 function Header() {
-  const [query, setQuery] = useState("");
   const inputQuery = useRef(null);
+
+  const query = useStore((state) => state.query);
+  const setQuery = useStore((state) => state.setQuery);
 
   const globalKeyHandler = useCallback(
     (e: KeyboardEvent) => {
@@ -15,7 +18,7 @@ function Header() {
         }
       }
     },
-    [query]
+    [query, setQuery]
   );
 
   useEffect(() => {

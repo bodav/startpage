@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DynamicSvg from "@/components/DynamicSvg";
+import useStore from "@/lib/store";
 
 interface LinkCellProps {
   title: string;
@@ -16,6 +17,8 @@ const LinkCell: React.FC<LinkCellProps> = ({
   index,
   isXl
 }) => {
+  const query = useStore((state) => state.query);
+
   const roundCell = (index: number, isXl: boolean) => {
     if (isXl) {
       if (index === 0) {
@@ -44,12 +47,20 @@ const LinkCell: React.FC<LinkCellProps> = ({
     }
   };
 
+  const getHighlight = () => {
+    if (query.length > 0 && title.toLowerCase().includes(query.toLowerCase())) {
+      return "bg-opacity-80";
+    } else {
+      return "";
+    }
+  };
+
   return (
     <div
       className={`text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-40 hover:bg-opacity-80 dark:hover:bg-opacity-80 backdrop-filter backdrop-blur-sm ${roundCell(
         index,
         isXl
-      )}`}>
+      )} ${getHighlight()}`}>
       <a
         href={url}
         target="_blank"
