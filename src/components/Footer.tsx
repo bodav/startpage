@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <>
-      <div className="flex justify-between text-slate-100 dark:text-slate-950 m-4 text-xs font-light">
+      <div className="flex justify-between text-white dark:text-black m-4 text-xs font-normal">
         <div>
           <a href={config.internalUrl} target="_blank">
             {internalDomain}

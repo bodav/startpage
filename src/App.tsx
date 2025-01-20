@@ -9,8 +9,9 @@ function App() {
 
   const backgroundStyle = {
     backgroundImage: `url(${config.backgroundImage})`,
-    backgroundPosition: "center",
-    backgroundRepeat: "cover"
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
   };
 
   const backgroundFilterStyle = {

@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import DynamicSvg from "@/components/DynamicSvg";
 import useStore from "@/lib/store";
 
@@ -49,7 +48,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
 
   const getHighlight = () => {
     if (query.length > 0 && title.toLowerCase().includes(query.toLowerCase())) {
-      return "bg-opacity-80";
+      return "bg-opacity-90 dark:bg-opacity-80";
     } else {
       return "";
     }
@@ -57,14 +56,14 @@ const LinkCell: React.FC<LinkCellProps> = ({
 
   return (
     <div
-      className={`text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-40 hover:bg-opacity-80 dark:hover:bg-opacity-80 backdrop-filter backdrop-blur-sm ${roundCell(
+      className={`text-black dark:text-white bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-50 hover:bg-opacity-90 dark:hover:bg-opacity-80 backdrop-filter backdrop-blur-sm ${roundCell(
         index,
         isXl
       )} ${getHighlight()}`}>
       <a
         href={url}
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
         className="flex items-center justify-start p-6">
         <DynamicSvg icon={icon} className="w-10 h-10 fill-current" />
         <span className=" hidden text-sm font-normal ml-4 sm:inline">

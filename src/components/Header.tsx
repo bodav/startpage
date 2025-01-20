@@ -1,5 +1,6 @@
+import useKeyDown from "@/hooks/useKeyDown";
 import useStore from "@/lib/store";
-import { useCallback, useEffect, useRef } from "react";
+import { useRef } from "react";
 
 function Header() {
   const inputQuery = useRef(null);
@@ -7,27 +8,22 @@ function Header() {
   const query = useStore((state) => state.query);
   const setQuery = useStore((state) => state.setQuery);
 
-  const globalKeyHandler = useCallback(
+  useKeyDown(
     (e: KeyboardEvent) => {
       if (document.activeElement != inputQuery.current) {
-        console.log(e);
         if (e.key === "Escape") {
           setQuery("");
-        } else if (/^[a-zA-Z0-9]$/.test(e.key)) {
+        } else if (e.key === "Backspace") {
+          if (query.length > 0) {
+            setQuery(query.slice(0, -1));
+          }
+        } else if (/^[a-zA-Z0-9\s]$/.test(e.key)) {
           setQuery(query + e.key);
         }
       }
     },
     [query, setQuery]
   );
-
-  useEffect(() => {
-    document.addEventListener("keydown", globalKeyHandler);
-
-    return () => {
-      document.removeEventListener("keydown", globalKeyHandler);
-    };
-  }, [globalKeyHandler]);
 
   return (
     <>
@@ -37,7 +33,7 @@ function Header() {
           value={query}
           ref={inputQuery}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full max-w-3xl p-2 focus:outline-none rounded-xl text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-950 bg-opacity-30 dark:bg-opacity-30 backdrop-filter backdrop-blur-sm"
+          className="w-full max-w-3xl p-2 focus:outline-none font-medium rounded-xl text-black dark:text-white bg-white dark:bg-black bg-opacity-30 dark:bg-opacity-30 backdrop-filter backdrop-blur-sm"
         />
       </div>
     </>
