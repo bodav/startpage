@@ -66,7 +66,7 @@ const linkConfig = {
 
 const backgroundConfig = {
   backgroundImage:
-    "https://images.unsplash.com/photo-1735437653041-95370241f201?q=80&w=3387&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1737562963380-3a7e45c0bf31?q=80&w=3387&auto=format&fit=crop",
   //"https://images.unsplash.com/photo-1734887650648-a4b092ee26ff?q=80&w=3305&auto=format&fit=crop",
   brightness: 80
 } satisfies BackgroundConfig;

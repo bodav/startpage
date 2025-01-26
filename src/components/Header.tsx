@@ -33,7 +33,7 @@ function Header() {
           value={query}
           ref={inputQuery}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full max-w-3xl p-2 focus:outline-none font-medium rounded-xl text-black dark:text-white bg-white dark:bg-black bg-opacity-30 dark:bg-opacity-30 backdrop-filter backdrop-blur-sm"
+          className="w-full max-w-3xl p-2 focus:outline-hidden font-medium rounded-xl text-black dark:text-white bg-white/59 dark:bg-black/50 backdrop-filter backdrop-blur-xs"
         />
       </div>
     </>

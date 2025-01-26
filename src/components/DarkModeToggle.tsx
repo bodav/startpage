@@ -21,7 +21,7 @@ function DarkModeToggle() {
 
   return (
     <button
-      className="rounded-full focus:outline-none"
+      className="rounded-full focus:outline-hidden"
       onClick={toggleDarkMode}>
       {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
     </button>

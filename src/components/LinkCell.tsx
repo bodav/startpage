@@ -48,7 +48,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
 
   const getHighlight = () => {
     if (query.length > 0 && title.toLowerCase().includes(query.toLowerCase())) {
-      return "bg-opacity-90 dark:bg-opacity-80";
+      return "bg-white/95 dark:bg-black/80";
     } else {
       return "";
     }
@@ -56,7 +56,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
 
   return (
     <div
-      className={`text-black dark:text-white bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-50 hover:bg-opacity-90 dark:hover:bg-opacity-80 backdrop-filter backdrop-blur-sm ${roundCell(
+      className={`text-black dark:text-white bg-white/75 dark:bg-black/50 hover:bg-white/95 dark:hover:dark:bg-black/80 backdrop-filter backdrop-blur-xs ${roundCell(
         index,
         isXl
       )} ${getHighlight()}`}>

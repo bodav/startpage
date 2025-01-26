@@ -29,7 +29,7 @@ function App() {
         className="fixed overflow-auto w-full h-full">
         <div
           id="container"
-          className="container m-auto grid grid-rows-[auto,1fr,auto] z-10 h-full">
+          className="container m-auto grid grid-rows-[auto_1fr_auto] z-10 h-full">
           <div className="row-start-1">
             <Header />
           </div>

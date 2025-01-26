@@ -62,5 +62,5 @@
 }
 
 body {
-  @apply font-geist;
+  font-family: Geist, serif;
 }
