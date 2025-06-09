@@ -1,15 +1,17 @@
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 
-const useKeyDown = (handler: (e: KeyboardEvent) => void, deps: unknown[]) => {
-  const keyHandler = useCallback(handler, deps);
-
+export const useKeyDown = (callback: (e: KeyboardEvent) => void) => {
   useEffect(() => {
-    document.addEventListener("keydown", keyHandler);
-
-    return () => {
-      document.removeEventListener("keydown", keyHandler);
+    const onKeyDown = (event: KeyboardEvent) => {
+      callback(event);
     };
-  }, [keyHandler]);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  });
 };
 
 export default useKeyDown;
+
+//https://medium.com/@paulohfev/problem-solving-custom-react-hook-for-keydown-events-e68c8b0a371
