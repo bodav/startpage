@@ -8,22 +8,19 @@ function Header() {
   const query = useStore((state) => state.query);
   const setQuery = useStore((state) => state.setQuery);
 
-  useKeyDown(
-    (e: KeyboardEvent) => {
-      if (document.activeElement != inputQuery.current) {
-        if (e.key === "Escape") {
-          setQuery("");
-        } else if (e.key === "Backspace") {
-          if (query.length > 0) {
-            setQuery(query.slice(0, -1));
-          }
-        } else if (/^[a-zA-Z0-9\s]$/.test(e.key)) {
-          setQuery(query + e.key);
+  useKeyDown((e: KeyboardEvent) => {
+    if (document.activeElement != inputQuery.current) {
+      if (e.key === "Escape") {
+        setQuery("");
+      } else if (e.key === "Backspace") {
+        if (query.length > 0) {
+          setQuery(query.slice(0, -1));
         }
+      } else if (/^[a-zA-Z0-9\s]$/.test(e.key)) {
+        setQuery(query + e.key);
       }
-    },
-    [query, setQuery]
-  );
+    }
+  });
 
   return (
     <>
