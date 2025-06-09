@@ -13,5 +13,3 @@ export const useKeyDown = (callback: (e: KeyboardEvent) => void) => {
 };
 
 export default useKeyDown;
-
-//https://medium.com/@paulohfev/problem-solving-custom-react-hook-for-keydown-events-e68c8b0a371
