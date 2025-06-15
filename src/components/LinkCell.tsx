@@ -1,5 +1,6 @@
 import DynamicSvg from "@/components/DynamicSvg";
-import useStore from "@/lib/store";
+import { QueryContext } from "@/context/QueryContext";
+import { use } from "react";
 
 interface LinkCellProps {
   title: string;
@@ -16,7 +17,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
   index,
   isXl
 }) => {
-  const query = useStore((state) => state.query);
+  const { query } = use(QueryContext);
 
   const roundCell = (index: number, isXl: boolean) => {
     if (isXl) {
@@ -66,7 +67,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
         rel="noreferrer noopener"
         className="flex items-center justify-start p-6">
         <DynamicSvg icon={icon} className="w-10 h-10 fill-current" />
-        <span className=" hidden text-sm font-normal ml-4 sm:inline">
+        <span className="hidden text-sm font-normal ml-4 sm:inline">
           {title}
         </span>
       </a>
