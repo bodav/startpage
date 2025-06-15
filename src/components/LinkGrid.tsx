@@ -1,12 +1,29 @@
 import { linkConfig } from "@/lib/config";
 import LinkCell from "@/components/LinkCell";
 import { useMediaQuery } from "react-responsive";
+import useKeyDown from "@/hooks/useKeyDown";
+import { QueryContext } from "@/context/QueryContext";
+import { use } from "react";
 
 function LinkGrid() {
   const config = linkConfig;
 
   const isXl = useMediaQuery({
     query: "(min-width: 1280px)"
+  });
+
+  const { query, setQuery } = use(QueryContext);
+
+  useKeyDown((e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setQuery("");
+    } else if (e.key === "Backspace") {
+      if (query.length > 0) {
+        setQuery(query.slice(0, -1));
+      }
+    } else if (/^[a-zA-Z0-9\s]$/.test(e.key)) {
+      setQuery(query + e.key);
+    }
   });
 
   return (

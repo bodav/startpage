@@ -20,31 +20,31 @@ function App() {
   };
 
   return (
-    <QueryProvider>
+    <div
+      id="backgroundWrapper"
+      className="fixed overflow-auto w-full h-full"
+      style={backgroundStyle}>
       <div
-        id="backgroundWrapper"
-        className="fixed overflow-auto w-full h-full"
-        style={backgroundStyle}>
+        id="backgroundOverlay"
+        style={backgroundFilterStyle}
+        className="fixed overflow-auto w-full h-full">
         <div
-          id="backgroundOverlay"
-          style={backgroundFilterStyle}
-          className="fixed overflow-auto w-full h-full">
-          <div
-            id="container"
-            className="grid grid-rows-[auto_1fr_auto] z-10 h-full p-4">
-            <div className="row-start-1">
-              <Header />
-            </div>
-            <div className="row-start-2">
+          id="container"
+          className="grid grid-rows-[auto_1fr_auto] z-10 h-full p-4">
+          <div className="row-start-1">
+            <Header />
+          </div>
+          <div className="row-start-2">
+            <QueryProvider>
               <LinkGrid />
-            </div>
-            <div className="row-start-3">
-              <Footer />
-            </div>
+            </QueryProvider>
+          </div>
+          <div className="row-start-3">
+            <Footer />
           </div>
         </div>
       </div>
-    </QueryProvider>
+    </div>
   );
 }
 
