@@ -10,6 +10,20 @@ interface LinkCellProps {
   isXl: boolean;
 }
 
+const xlRounding: Record<number, string> = {
+  0: "rounded-tl-2xl",
+  5: "rounded-tr-2xl",
+  6: "rounded-bl-2xl",
+  11: "rounded-br-2xl"
+};
+
+const mdRounding: Record<number, string> = {
+  0: "rounded-tl-2xl",
+  3: "rounded-tr-2xl",
+  8: "rounded-bl-2xl",
+  11: "rounded-br-2xl"
+};
+
 const LinkCell: React.FC<LinkCellProps> = ({
   title,
   url,
@@ -19,33 +33,8 @@ const LinkCell: React.FC<LinkCellProps> = ({
 }) => {
   const { query } = use(QueryContext);
 
-  const roundCell = (index: number, isXl: boolean) => {
-    if (isXl) {
-      if (index === 0) {
-        return "rounded-tl-2xl";
-      } else if (index === 5) {
-        return "rounded-tr-2xl";
-      } else if (index === 6) {
-        return "rounded-bl-2xl";
-      } else if (index === 11) {
-        return "rounded-br-2xl";
-      } else {
-        return "";
-      }
-    } else {
-      if (index === 0) {
-        return "rounded-tl-2xl";
-      } else if (index === 3) {
-        return "rounded-tr-2xl";
-      } else if (index === 8) {
-        return "rounded-bl-2xl";
-      } else if (index === 11) {
-        return "rounded-br-2xl";
-      } else {
-        return "";
-      }
-    }
-  };
+  const roundCell = (index: number, isXl: boolean) =>
+    isXl ? xlRounding[index] || "" : mdRounding[index] || "";
 
   const getHighlight = () => {
     if (query.length > 0 && title.toLowerCase().includes(query.toLowerCase())) {
