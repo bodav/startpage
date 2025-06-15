@@ -28,7 +28,7 @@
     {
       "title": "DMI",
       "url": "https://www.dmi.dk/lokation/show/DK/2625070/Aabenraa/",
-      "icon": "accuweather"
+      "icon": "dmi"
     },
     {
       "title": "Facebook",
@@ -63,7 +63,7 @@
     {
       "title": "Pushover",
       "url": "https://client.pushover.net/",
-      "icon": "pusher"
+      "icon": "pushover"
     }
   ]
 }
