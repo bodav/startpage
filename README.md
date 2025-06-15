@@ -2,8 +2,6 @@
 
 https://dev.to/hexshift/dynamic-theme-switching-in-tailwind-css-without-rebuilding-stylesheets-1le5
 
-- eager load icons
-- improve corner code
 - json config
 - themes
 
