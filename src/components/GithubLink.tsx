@@ -12,7 +12,7 @@ const GithubLink = () => {
       href={url}
       target="_blank"
       className="flex items-center justify-start text-xs font-normal">
-      <GithubIcon className="w-6 h-6 mr-2" />
+      <GithubIcon className="w-6 h-6 mr-2 fill-current" />
       <span>
         <div className="text-center">{repo}</div>
         <div className="flex items-center justify-center">

@@ -2,7 +2,6 @@
 
 https://dev.to/hexshift/dynamic-theme-switching-in-tailwind-css-without-rebuilding-stylesheets-1le5
 
-- json config
 - themes
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
