@@ -53,7 +53,6 @@ const LinkCell: React.FC<LinkCellProps> = ({
       <a
         href={url}
         target="_blank"
-        rel="noreferrer noopener"
         className="flex items-center justify-start p-6">
         <LinkIcon icon={icon} className="w-10 h-10 fill-current" />
         <span className="hidden text-sm font-normal ml-4 sm:inline">

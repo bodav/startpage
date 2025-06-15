@@ -1,12 +1,13 @@
-import { linkConfig } from "@/lib/config";
 import LinkCell from "@/components/LinkCell";
 import { useMediaQuery } from "react-responsive";
 import useKeyDown from "@/hooks/useKeyDown";
 import { QueryContext } from "@/context/QueryContext";
 import { use } from "react";
+import configJson from "@/config.json";
+import { StartpageConfig } from "@/types/config";
 
 function LinkGrid() {
-  const config = linkConfig;
+  const config = configJson as StartpageConfig;
 
   const isXl = useMediaQuery({
     query: "(min-width: 1280px)"

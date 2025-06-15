@@ -9,7 +9,7 @@ import YoutubeIcon from "@/assets/icons/youtube.svg?react";
 import DrIcon from "@/assets/icons/dr.svg?react";
 import XIcon from "@/assets/icons/x.svg?react";
 import StravaIcon from "@/assets/icons/strava.svg?react";
-import GarminIcon from "@/assets/icons/garmin.svg?react";
+import PolarFlowIcon from "@/assets/icons/polarflow.svg?react";
 import PusherIcon from "@/assets/icons/pusher.svg?react";
 
 const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
@@ -23,7 +23,7 @@ const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   dr: DrIcon,
   x: XIcon,
   strava: StravaIcon,
-  garmin: GarminIcon,
+  polarflow: PolarFlowIcon,
   pusher: PusherIcon
 };
 

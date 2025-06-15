@@ -1,22 +1,23 @@
 import "@/App.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { backgroundConfig } from "@/lib/config";
 import LinkGrid from "./components/LinkGrid";
 import { QueryProvider } from "./context/QueryContext";
+import configJson from "@/config.json";
+import { StartpageConfig } from "./types/config";
 
 function App() {
-  const config = backgroundConfig;
+  const config = configJson as StartpageConfig;
 
   const backgroundStyle = {
-    backgroundImage: `url(${config.backgroundImage})`,
+    backgroundImage: `url(${config.background.url})`,
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
   };
 
   const backgroundFilterStyle = {
-    backdropFilter: `brightness(${config.brightness}%)`
+    backdropFilter: `brightness(${config.background.brightness}%)`
   };
 
   return (
@@ -40,7 +41,7 @@ function App() {
             </QueryProvider>
           </div>
           <div className="row-start-3">
-            <Footer />
+            <Footer internalUrl={config.internalUrl} />
           </div>
         </div>
       </div>
