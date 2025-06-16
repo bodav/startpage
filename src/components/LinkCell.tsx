@@ -38,7 +38,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
 
   const getHighlight = () => {
     if (query.length > 0 && title.toLowerCase().includes(query.toLowerCase())) {
-      return "bg-white/95 dark:bg-black/80";
+      return "ring-2 ring-blue-500/70 ring-inset";
     } else {
       return "";
     }
