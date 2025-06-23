@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <div className="grid grid-cols-[auto_1fr_auto]">
-        <div className="col-3 text-white dark:text-black">
+        <div className="col-3 text-muted hover:text-primary transition-all duration-500 ease-in-out">
           <GithubLink />
         </div>
       </div>

@@ -1,3 +1,36 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant highlighted (&:where(.highlight, .highlight *));
+
+@theme {
+  --color-primary: oklch(1 0 0 / 90%);
+  --color-primary-foreground: oklch(0 0 0);
+  --color-muted: oklch(1 0 0 / 65%);
+  --color-muted-foreground: oklch(0 0 0 / 75%);
+  --color-highlight: oklch(776.9% 0.188 70.08);
+}
+
+@layer base {
+  [data-theme="light"] {
+    --color-primary: oklch(1 0 0 / 80%);
+    --color-primary-foreground: oklch(0 0 0);
+    --color-muted: oklch(1 0 0 / 60%);
+    --color-muted-foreground: oklch(0 0 0 / 75%);
+    --color-highlight: oklch(62.3% 0.214 259.815 / 80%);
+  }
+
+  [data-theme="dark"] {
+    --color-primary: oklch(55.6% 0 0 / 80%);
+    --color-primary-foreground: oklch(98.5% 0 0 / 90%);
+    --color-muted: oklch(55.6% 0 0 / 60%);
+    --color-muted-foreground: oklch(98.5% 0 0 / 75%);
+    --color-highlight: oklch(64.5% 0.246 16.439 / 80%);
+  }
+
+  [data-theme="amber"] {
+    --color-primary: oklch(76.9% 0.188 70.08);
+    --color-primary-foreground: oklch(0 0 0);
+    --color-muted: oklch(87.9% 0.169 91.605);
+    --color-muted-foreground: oklch(0 0 0);
+  }
+}

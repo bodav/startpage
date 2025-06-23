@@ -36,25 +36,24 @@ const LinkCell: React.FC<LinkCellProps> = ({
   const roundCell = (index: number, isXl: boolean) =>
     isXl ? xlRounding[index] || "" : mdRounding[index] || "";
 
-  const getHighlight = () => {
-    if (query.length > 0 && title.toLowerCase().includes(query.toLowerCase())) {
-      return "ring-2 ring-blue-500/70 ring-inset";
-    } else {
-      return "";
-    }
-  };
+  const isSelected =
+    query.length > 0 && title.toLowerCase().includes(query.toLowerCase());
 
   return (
     <div
-      className={`text-black dark:text-white bg-white/75 dark:bg-black/50 hover:bg-white/95 dark:hover:dark:bg-black/80 backdrop-filter backdrop-blur-xs ${roundCell(
+      aria-selected={isSelected ? "true" : undefined}
+      className={`bg-muted text-muted-foreground hover:text-primary-foreground hover:bg-primary backdrop-filter backdrop-blur-xs transition-all duration-500 ease-in-out aria-selected:inset-ring-2 aria-selected:inset-ring-highlight ${roundCell(
         index,
         isXl
-      )} ${getHighlight()}`}>
+      )}`}>
       <a
         href={url}
         target="_blank"
         className="flex items-center justify-start p-6">
-        <LinkIcon icon={icon} className="w-10 h-10 fill-current" />
+        <LinkIcon
+          icon={icon}
+          className="w-10 h-10 fill-current stroke-current"
+        />
         <span className="hidden text-sm font-normal ml-4 sm:inline">
           {title}
         </span>

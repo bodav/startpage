@@ -23,7 +23,7 @@ function App() {
   return (
     <div
       id="backgroundWrapper"
-      className="fixed overflow-auto w-full h-full"
+      className="theme-white fixed overflow-auto w-full h-full"
       style={backgroundStyle}>
       <div
         id="backgroundOverlay"
