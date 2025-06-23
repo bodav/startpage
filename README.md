@@ -1,8 +1,5 @@
 # React + TypeScript + Vite
 
-https://dev.to/hexshift/dynamic-theme-switching-in-tailwind-css-without-rebuilding-stylesheets-1le5
-
-- themes
 - keyboard nav
 - popout sub links
 

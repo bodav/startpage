@@ -42,7 +42,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
   return (
     <div
       aria-selected={isSelected ? "true" : undefined}
-      className={`bg-muted text-muted-foreground hover:text-primary-foreground hover:bg-primary backdrop-filter backdrop-blur-xs transition-all duration-500 ease-in-out aria-selected:inset-ring-2 aria-selected:inset-ring-highlight ${roundCell(
+      className={`bg-muted text-muted-foreground hover:text-primary-foreground hover:bg-primary backdrop-filter backdrop-blur-xs transition-all duration-500 ease-in-out aria-selected:ring-2 aria-selected:ring-highlight ${roundCell(
         index,
         isXl
       )}`}>

@@ -1,4 +1,4 @@
-import DarkModeToggle from "@/components/DarkModeToggle";
+import ThemePicker from "./ThemePicker";
 
 interface FooterProps {
   internalUrl: string;
@@ -9,17 +9,17 @@ function Footer({ internalUrl }: FooterProps) {
 
   return (
     <>
-      <div className="flex justify-between text-muted hover:text-primary m-4 text-xs font-normal">
+      <div className="flex justify-between  m-4 text-xs font-normal">
         <div>
           <a
             href={internalUrl}
             target="_blank"
-            className="transition-all duration-200 ease-in-out">
+            className="text-muted hover:text-primary transition-all duration-200 ease-in-out">
             {internalDomain}
           </a>
         </div>
         <div>
-          <DarkModeToggle />
+          <ThemePicker />
         </div>
       </div>
     </>
