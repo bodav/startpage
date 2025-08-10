@@ -1,12 +1,11 @@
 import ThemePicker from "./ThemePicker";
+import { HouseWifi } from 'lucide-react';
 
 interface FooterProps {
   internalUrl: string;
 }
 
 function Footer({ internalUrl }: FooterProps) {
-  const internalDomain = new URL(internalUrl).hostname;
-
   return (
     <>
       <div className="flex justify-between  m-4 text-xs font-normal">
@@ -15,7 +14,7 @@ function Footer({ internalUrl }: FooterProps) {
             href={internalUrl}
             target="_blank"
             className="text-muted hover:text-primary transition-all duration-200 ease-in-out">
-            {internalDomain}
+            <HouseWifi className="w-6 h-6" />
           </a>
         </div>
         <div>
