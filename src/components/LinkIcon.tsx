@@ -1,6 +1,6 @@
 import React from "react";
 import GithubIcon from "@/assets/icons/github.svg?react";
-import Reddit2Icon from "@/assets/icons/reddit2.svg?react";
+import RedditIcon from "@/assets/icons/reddit.svg?react";
 import JvIcon from "@/assets/icons/jv.svg?react";
 import YcombinatorIcon from "@/assets/icons/ycombinator.svg?react";
 import DmiIcon from "@/assets/icons/dmi.svg?react";
@@ -26,7 +26,7 @@ const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   polarflow: PolarFlowIcon,
   pushover: PushoverIcon,
   bluesky: Bluesky,
-  reddit2: Reddit2Icon
+  reddit: RedditIcon
 };
 
 interface LinkIconProps {
