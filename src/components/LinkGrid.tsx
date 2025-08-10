@@ -28,7 +28,7 @@ function LinkGrid() {
   });
 
   return (
-    <div className="flex h-full items-center justify-center text-primary-foreground mx-10">
+    <div className="flex h-full items-center justify-center text-primary-foreground">
       <div className="grid xl:grid-rows-2 xl:grid-cols-6 grid-rows-3 grid-cols-4 gap-1">
         {config.links.map((link, index) => (
           <LinkCell

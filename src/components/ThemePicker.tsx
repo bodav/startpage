@@ -48,7 +48,7 @@ const ThemePicker: React.FC = () => {
 
   return (
     <div
-      className="relative inline-block text-muted hover:text-primary"
+      className="relative inline-block text-muted hover:text-primary transition-all duration-500 ease-in-out"
       ref={popoverRef}>
       <button
         className="focus:outline-hidden"
@@ -59,7 +59,7 @@ const ThemePicker: React.FC = () => {
         <Palette className="w-6 h-6 inline-block mr-1" />
       </button>
       {open && (
-        <div className="absolute right-0 z-10 bottom-full mb-2 w-40 rounded bg-muted text-muted-foreground shadow-lg p-2">
+        <div className="absolute right-0 z-10 bottom-full mb-2 w-40 rounded-lg bg-muted text-muted-foreground shadow-lg p-2">
           <div className="grid grid-cols-4 gap-2">
             {THEMES.map((theme) => (
               <button
