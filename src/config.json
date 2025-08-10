@@ -51,6 +51,11 @@
       "icon": "x"
     },
     {
+      "title": "Bluesky",
+      "url": "https://bsky.app/profile/prune602.bsky.social",
+      "icon": "bluesky"
+    },
+    {
       "title": "Strava",
       "url": "https://strava.com",
       "icon": "strava"
@@ -59,11 +64,6 @@
       "title": "Polar Flow",
       "url": "https://flow.polar.com",
       "icon": "polarflow"
-    },
-    {
-      "title": "Pushover",
-      "url": "https://client.pushover.net/",
-      "icon": "pushover"
     }
   ]
 }

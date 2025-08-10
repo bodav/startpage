@@ -11,6 +11,7 @@ import XIcon from "@/assets/icons/x.svg?react";
 import StravaIcon from "@/assets/icons/strava.svg?react";
 import PolarFlowIcon from "@/assets/icons/polarflow.svg?react";
 import PushoverIcon from "@/assets/icons/pushover.svg?react";
+import Bluesky from "@/assets/icons/bluesky.svg?react";
 
 const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   github: GithubIcon,
@@ -24,7 +25,8 @@ const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   x: XIcon,
   strava: StravaIcon,
   polarflow: PolarFlowIcon,
-  pushover: PushoverIcon
+  pushover: PushoverIcon,
+  bluesky: Bluesky
 };
 
 interface LinkIconProps {
