@@ -8,7 +8,7 @@ interface FooterProps {
 function Footer({ internalUrl }: FooterProps) {
   return (
     <>
-      <div className="flex justify-between  m-4 text-xs font-normal">
+      <div className="flex justify-between p-4 text-xs font-normal">
         <div>
           <a
             href={internalUrl}
