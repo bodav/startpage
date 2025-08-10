@@ -1,6 +1,6 @@
 import React from "react";
 import GithubIcon from "@/assets/icons/github.svg?react";
-import RedditIcon from "@/assets/icons/reddit.svg?react";
+import Reddit2Icon from "@/assets/icons/reddit2.svg?react";
 import JvIcon from "@/assets/icons/jv.svg?react";
 import YcombinatorIcon from "@/assets/icons/ycombinator.svg?react";
 import DmiIcon from "@/assets/icons/dmi.svg?react";
@@ -15,7 +15,6 @@ import Bluesky from "@/assets/icons/bluesky.svg?react";
 
 const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   github: GithubIcon,
-  reddit: RedditIcon,
   jv: JvIcon,
   ycombinator: YcombinatorIcon,
   dmi: DmiIcon,
@@ -26,7 +25,8 @@ const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   strava: StravaIcon,
   polarflow: PolarFlowIcon,
   pushover: PushoverIcon,
-  bluesky: Bluesky
+  bluesky: Bluesky,
+  reddit2: Reddit2Icon
 };
 
 interface LinkIconProps {
