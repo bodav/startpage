@@ -1,53 +1,62 @@
-# React + TypeScript + Vite
+# Startpage
 
-- keyboard nav
-- popout sub links
+A customizable browser startpage built with React, TypeScript, and Vite. Features a clean, responsive design with configurable links and keyboard navigation.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- **Configurable Links**: Easily customize your favorite websites and services
+- **Keyboard Navigation**: Type to filter links, use Escape to clear, Backspace to delete
+- **Responsive Design**: Adapts to different screen sizes with mobile-friendly layout
+- **Custom Background**: Set your own background image with brightness control
+- **Icon Support**: Built-in icons for popular services (GitHub, Reddit, YouTube, etc.)
+- **Theme Support**: Clean, modern design with customizable themes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Quick Start
 
-## Expanding the ESLint configuration
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+3. **Customize your links**: Edit `src/config.json` to add your favorite websites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname
-    }
-  }
-});
-```
+## Configuration
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Edit `src/config.json` to customize your startpage:
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react
+```json
+{
+  "background": {
+    "url": "https://your-background-image-url.jpg",
+    "brightness": 80
   },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules
-  }
-});
+  "internalUrl": "http://your-internal-server",
+  "links": [
+    {
+      "title": "GitHub",
+      "url": "https://github.com",
+      "icon": "github"
+    }
+  ]
+}
 ```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Tech Stack
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
