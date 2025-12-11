@@ -61,6 +61,8 @@ function LinkGrid() {
     } else if (e.key === "Enter") {
       if (focusedIndex >= 0) {
         e.preventDefault();
+        setQuery("");
+        setFocusedIndex(-1);
         linkRefs.current[focusedIndex]?.click();
       }
     } else if (/^[a-zA-Z0-9\s]$/.test(e.key)) {
