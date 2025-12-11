@@ -30,18 +30,21 @@ function LinkGrid() {
       }
     } else if (e.key === "ArrowRight") {
       e.preventDefault();
+      setQuery("");
       setFocusedIndex((prev) => {
         if (prev === -1) return 0;
         return prev < totalLinks - 1 ? prev + 1 : prev;
       });
     } else if (e.key === "ArrowLeft") {
       e.preventDefault();
+      setQuery("");
       setFocusedIndex((prev) => {
         if (prev === -1) return 0;
         return prev > 0 ? prev - 1 : prev;
       });
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
+      setQuery("");
       setFocusedIndex((prev) => {
         if (prev === -1) return 0;
         const next = prev + COLS;
@@ -49,6 +52,7 @@ function LinkGrid() {
       });
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
+      setQuery("");
       setFocusedIndex((prev) => {
         if (prev === -1) return 0;
         const next = prev - COLS;

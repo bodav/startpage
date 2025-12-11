@@ -33,8 +33,8 @@ const LinkCell = forwardRef<HTMLAnchorElement, LinkCellProps>(({
     query.length > 0 && title.toLowerCase().includes(query.toLowerCase());
 
   const getFocusStyle = () => {
-    if (isFocused) return { boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(59, 130, 246)' };
-    if (isSelected) return { boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(34, 197, 94)' };
+    if (isFocused) return { boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(225, 225, 225)' };
+    if (isSelected) return { boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(225, 225, 225)' };
     return {};
   };
 
