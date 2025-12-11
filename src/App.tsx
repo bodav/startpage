@@ -17,7 +17,7 @@ function App() {
   };
 
   const backgroundFilterStyle = {
-    backdropFilter: `brightness(${config.background.brightness}%)`
+    //backdropFilter: `brightness(${config.background.brightness}%)`
   };
 
   return (
