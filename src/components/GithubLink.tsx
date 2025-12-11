@@ -10,7 +10,7 @@ const GithubLink = () => {
       href={url}
       target="_blank"
       className="opacity-60 hover:opacity-80 transition-all duration-500 ease-in-out">
-      <GithubIcon className="w-6 h-6 mr-2 fill-current" />
+      <GithubIcon className="w-6 h-6 fill-current" />
     </a>
   );
 };
