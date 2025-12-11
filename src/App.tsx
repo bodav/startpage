@@ -16,33 +16,24 @@ function App() {
     backgroundSize: "cover"
   };
 
-  const backgroundFilterStyle = {
-    //backdropFilter: `brightness(${config.background.brightness}%)`
-  };
-
   return (
     <div
       id="backgroundWrapper"
       className="theme-white fixed overflow-auto w-full h-full"
       style={backgroundStyle}>
       <div
-        id="backgroundOverlay"
-        style={backgroundFilterStyle}
-        className="fixed overflow-auto w-full h-full">
-        <div
-          id="container"
-          className="grid grid-rows-[auto_1fr_auto] z-10 h-full p-4">
-          <div className="row-start-1">
-            <Header />
-          </div>
-          <div className="row-start-2">
-            <QueryProvider>
-              <LinkGrid />
-            </QueryProvider>
-          </div>
-          <div className="row-start-3">
-            <Footer internalUrl={config.internalUrl} />
-          </div>
+        id="container"
+        className="grid grid-rows-[auto_1fr_auto] z-10 h-full p-4 text-black dark:text-white">
+        <div className="row-start-1">
+          <Header />
+        </div>
+        <div className="row-start-2">
+          <QueryProvider>
+            <LinkGrid />
+          </QueryProvider>
+        </div>
+        <div className="row-start-3">
+          <Footer internalUrl={config.internalUrl} />
         </div>
       </div>
     </div>

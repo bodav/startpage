@@ -9,7 +9,7 @@ const GithubLink = () => {
     <a
       href={url}
       target="_blank"
-      className=" text-muted hover:text-primary transition-all duration-500 ease-in-out">
+      className="opacity-60 hover:opacity-80 transition-all duration-500 ease-in-out">
       <GithubIcon className="w-6 h-6 mr-2 fill-current" />
     </a>
   );

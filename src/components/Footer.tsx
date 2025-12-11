@@ -1,4 +1,3 @@
-import ThemePicker from "./ThemePicker";
 import { HouseWifi } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -42,7 +41,7 @@ function Footer({ internalUrl }: FooterProps) {
           )}
         </div>
         <div>
-          <ThemePicker />
+          
         </div>
       </div>
     </>
