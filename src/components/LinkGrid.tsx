@@ -1,5 +1,4 @@
 import LinkCell from "@/components/LinkCell";
-import { useMediaQuery } from "react-responsive";
 import useKeyDown from "@/hooks/useKeyDown";
 import { QueryContext } from "@/context/QueryContext";
 import { use } from "react";
@@ -8,10 +7,6 @@ import { StartpageConfig } from "@/types/config";
 
 function LinkGrid() {
   const config = configJson as StartpageConfig;
-
-  const isXl = useMediaQuery({
-    query: "(min-width: 1280px)"
-  });
 
   const { query, setQuery } = use(QueryContext);
 
@@ -29,7 +24,7 @@ function LinkGrid() {
 
   return (
     <div className="flex h-full items-center justify-center text-primary-foreground">
-      <div className="grid xl:grid-rows-2 xl:grid-cols-6 grid-rows-3 grid-cols-4 gap-1 text-white dark:text-black">
+      <div className="grid  grid-rows-3 grid-cols-4 gap-2 text-white dark:text-black">
         {config.links.map((link, index) => (
           <LinkCell
             key={link.title}
@@ -37,7 +32,6 @@ function LinkGrid() {
             url={link.url}
             icon={link.icon}
             index={index}
-            isXl={isXl}
           />
         ))}
       </div>

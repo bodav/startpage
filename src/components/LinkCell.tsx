@@ -7,15 +7,7 @@ interface LinkCellProps {
   url: string;
   icon: string;
   index: number;
-  isXl: boolean;
 }
-
-const xlRounding: Record<number, string> = {
-  0: "rounded-tl-2xl",
-  5: "rounded-tr-2xl",
-  6: "rounded-bl-2xl",
-  11: "rounded-br-2xl"
-};
 
 const mdRounding: Record<number, string> = {
   0: "rounded-tl-2xl",
@@ -28,13 +20,12 @@ const LinkCell: React.FC<LinkCellProps> = ({
   title,
   url,
   icon,
-  index,
-  isXl
+  index
 }) => {
   const { query } = use(QueryContext);
 
-  const roundCell = (index: number, isXl: boolean) =>
-    isXl ? xlRounding[index] || "" : mdRounding[index] || "";
+  const roundCell = (index: number) =>
+    mdRounding[index] || "";
 
   const isSelected =
     query.length > 0 && title.toLowerCase().includes(query.toLowerCase());
@@ -43,8 +34,7 @@ const LinkCell: React.FC<LinkCellProps> = ({
     <div
       aria-selected={isSelected ? "true" : undefined}
       className={`glass ${roundCell(
-        index,
-        isXl
+        index
       )}`}>
       <a
         href={url}

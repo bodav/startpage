@@ -26,6 +26,11 @@
       "icon": "ycombinator"
     },
     {
+      "title": "Youtube",
+      "url": "https://youtube.com",
+      "icon": "youtube"
+    },
+    {
       "title": "DMI",
       "url": "https://www.dmi.dk/lokation/show/DK/2625070/Aabenraa/",
       "icon": "dmi"
@@ -34,11 +39,6 @@
       "title": "Facebook",
       "url": "https://facebook.com",
       "icon": "facebook"
-    },
-    {
-      "title": "Youtube",
-      "url": "https://youtube.com",
-      "icon": "youtube"
     },
     {
       "title": "DR/TV",
