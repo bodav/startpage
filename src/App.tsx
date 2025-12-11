@@ -23,7 +23,7 @@ function App() {
       style={backgroundStyle}>
       <div
         id="container"
-        className="grid grid-rows-[auto_1fr_auto] z-10 h-full p-4 text-black dark:text-white">
+        className="grid grid-rows-[auto_1fr_auto] z-10 h-full p-4">
         <div className="row-start-1">
           <Header />
         </div>
