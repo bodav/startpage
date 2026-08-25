@@ -1,8 +1,8 @@
 <script lang="ts">
 	import LinkIcon from './LinkIcon.svelte';
 
-	const repo = import.meta.env.VITE_GITHUB_REPOSITORY;
-	const ref = import.meta.env.VITE_GIT_REF.split('/').pop() || 'N/A';
+	const repo = import.meta.env.VITE_GITHUB_REPOSITORY ?? '';
+	const ref = import.meta.env.VITE_GIT_REF?.split('/').pop() ?? 'main';
 	const url = `https://github.com/${repo}/tree/${ref}`;
 </script>
 
