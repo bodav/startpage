@@ -1,62 +1,42 @@
-# Startpage
+# sv
 
-A customizable browser startpage built with React, TypeScript, and Vite. Features a clean, responsive design with configurable links and keyboard navigation.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Features
+## Creating a project
 
-- **Configurable Links**: Easily customize your favorite websites and services
-- **Keyboard Navigation**: Type to filter links, use Escape to clear, Backspace to delete
-- **Responsive Design**: Adapts to different screen sizes with mobile-friendly layout
-- **Custom Background**: Set your own background image with brightness control
-- **Icon Support**: Built-in icons for popular services (GitHub, Reddit, YouTube, etc.)
-- **Theme Support**: Clean, modern design with customizable themes
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Quick Start
-
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Start development server**:
-   ```bash
-   npm run dev
-   ```
-
-3. **Customize your links**: Edit `src/config.json` to add your favorite websites
-
-## Configuration
-
-Edit `src/config.json` to customize your startpage:
-
-```json
-{
-  "background": {
-    "url": "https://your-background-image-url.jpg",
-    "brightness": 80
-  },
-  "internalUrl": "http://your-internal-server",
-  "links": [
-    {
-      "title": "GitHub",
-      "url": "https://github.com",
-      "icon": "github"
-    }
-  ]
-}
+```sh
+# create a new project
+npx sv create my-app
 ```
 
-## Available Scripts
+To recreate this project with the same configuration:
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+```sh
+# recreate this project
+npx sv@0.17.0 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography" sveltekit-adapter="adapter:static" --install npm startpage
+```
 
-## Tech Stack
+## Developing
 
-- **React 19** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Styling
-- **Lucide React** - Icons
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
